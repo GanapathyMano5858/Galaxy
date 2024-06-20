@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  /* --primaryColor: ; */
+  --secondaryColor: #ff9d00;
+  --icon: #808080;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.inputbox {
+  position: relative;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inputbox input {
+  padding: 13px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--icon);
+}
+
+.inputbox input:focus {
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 30%);
+}
+
+.inputbox i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: gray;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+
+.popularDishes {
+  display: flex;
+  column-gap: 15px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+
+.menuItem {
+  width: 65px;
+  height: 65px;
+}
+
+.searchItems {
+  column-gap: 10px;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.searchItemsName {
+  display: flex;
+  justify-content: center;
+  row-gap: 5px;
+  flex-direction: column;
+}
+.dishName {
+  font-size: 16px;
+  color: #343745;
+  font-weight: 500;
+}
+.dishType {
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+
+.searchItemsDiv {
+  display: flex;
+  border-radius: 5px;
+  height: 40vh;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+.searchItems:hover {
+  background-color: #f2f6fc;
+}
+
+.filter {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.line {
+  border-right: 2px dashed #93959f;
+  height: 22px;
+  width: 1px;
+}
+
+.filterBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 8px;
+  outline: none;
+  background: #fafafa;
+  border: 1px solid #dcdee8;
+  box-sizing: border-box;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 0.93rem;
+  line-height: 1;
+  color: #686b78;
+  position: relative;
+}
+
+.filterBtnActive {
+  background: #fdf2ee;
+  border: 1px solid;
+  color: #676a77;
+  font-weight: 500;
+}
+
+.VLine {
+  margin: 10px 0;
+}
+
+.dishList {
+  background-color: #f7f7f7;
+  height: 900px;
+  border-radius: 5px;
+}
+
+.menuList {
+  /* height: 150px; */
+  padding: 20px 15px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.dishNamePrice {
+  display: flex;
+  row-gap: 5px;
+  padding: 0 15px 0 0;
+  flex-direction: column;
+}
+.dishName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dishImage {
+  overflow: hidden;
+  border-radius: 15px;
+}
