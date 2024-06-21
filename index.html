@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./asset/CSS/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar bg-dark" style="height: 65px">
+    <header class="headerNavBar">
+      <nav class="navbar">
         <div class="container-fluid">
           <a class="navbar-brand d-flex" style="width: 150px" href="/">
             <img
@@ -25,19 +25,23 @@
         </div>
       </nav>
     </header>
-    <section class="container">
-      <div class="pt-5 pb-2">
+    <section class="container searchBar">
+      <div class="pt-5 pb-3">
         <div class="inputbox">
-          <input type="text" class="w-100" placeholder="Search food ...." />
+          <input
+            type="text"
+            id="searchInput"
+            autocomplete="off"
+            class="w-100"
+            placeholder="Search food ...."
+          />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
-
-      <div class="pt-4 title">Popular Cuisines</div>
+    </section>
+    <section class="container" id="popularCuisines">
+      <div class="pt-3 title">Popular Cuisines</div>
       <div class="pt-4 pb-2 popularDishes">
-        <div class="items">
-          <img src="./asset/Image/biryani.avif" alt="item" class="w-100" />
-        </div>
         <div class="items">
           <img src="./asset/Image/burger.jpeg" alt="item" class="w-100" />
         </div>
@@ -78,11 +82,12 @@
       <hr class="VLine mb-0" />
     </section>
     <section class="container dishList">
+      <h5 class="dishTitle m-0">Soup :-</h5>
       <div class="row">
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
+              <div class="dishName">Veg Soup</div>
               <div class="dishPrice">&#8377; 250</div>
               <div class="mt-3">
                 <button class="filterBtn">
@@ -90,128 +95,1550 @@
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
-                <img
-                  src="./asset/Image/chickenBiryani.jpg"
-                  alt=""
-                  class="w-100"
-                />
+                <img src="./asset/Image/Veg_Soup.jpg" alt="" class="w-100" />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
-              <div class="dishPrice">&#8377; 250</div>
+              <div class="dishName">Cream of Mushroom Soup</div>
+              <div class="dishPrice">&#8377; 160</div>
               <div class="mt-3">
                 <button class="filterBtn">
                   More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
                 <img
-                  src="./asset/Image/chickenBiryani.jpg"
+                  src="./asset/Image/MushroomSoup.jpeg"
                   alt=""
                   class="w-100"
                 />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
-              <div class="dishPrice">&#8377; 250</div>
+              <div class="dishName">Veg Clear Soups</div>
+              <div class="dishPrice">&#8377; 160</div>
               <div class="mt-3">
                 <button class="filterBtn">
                   More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
                 <img
-                  src="./asset/Image/chickenBiryani.jpg"
+                  src="./asset/Image/vegClearSoups.jpg"
                   alt=""
                   class="w-100"
                 />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
-              <div class="dishPrice">&#8377; 250</div>
+              <div class="dishName">Cream of Broccoli Soup</div>
+              <div class="dishPrice">&#8377; 160</div>
               <div class="mt-3">
                 <button class="filterBtn">
                   More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
                 <img
-                  src="./asset/Image/chickenBiryani.jpg"
+                  src="./asset/Image/broccoliSoup.jpg"
                   alt=""
                   class="w-100"
                 />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
-              <div class="dishPrice">&#8377; 250</div>
+              <div class="dishName">Sea food Soup</div>
+              <div class="dishPrice">&#8377; 199</div>
               <div class="mt-3">
                 <button class="filterBtn">
                   More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
-                <img
-                  src="./asset/Image/chickenBiryani.jpg"
-                  alt=""
-                  class="w-100"
-                />
+                <img src="./asset/Image/seaFoodSoup.jpg" alt="" class="w-100" />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 px-3 pt-3">
+        <div class="col-12 col-lg-4 px-3 pt-4">
           <div class="menuList">
             <div class="col-6 dishNamePrice ps-0">
-              <div class="dishName">Chicken Biryani</div>
-              <div class="dishPrice">&#8377; 250</div>
+              <div class="dishName">Chicken Sweet Corn Soup</div>
+              <div class="dishPrice">&#8377; 199</div>
               <div class="mt-3">
                 <button class="filterBtn">
                   More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-6 p-0 position-relative">
               <div class="dishImage">
                 <img
-                  src="./asset/Image/chickenBiryani.jpg"
+                  src="./asset/Image/chickenSweetCornSoup.jpg"
                   alt=""
                   class="w-100"
                 />
               </div>
+              <button class="addBtn">Add</button>
             </div>
           </div>
         </div>
-        
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Cream of Chicken Soup</div>
+              <div class="dishPrice">&#8377; 199</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/creamofChickenSoup.jpeg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Salad :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Garden Green Salad</div>
+              <div class="dishPrice">&#8377; 200</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/gardenGreenSalad.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Ceaser Veg</div>
+              <div class="dishPrice">&#8377; 200</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/ceaserVeg.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Water Melon & Feta</div>
+              <div class="dishPrice">&#8377; 220</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/waterMelon&Feta.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Ceaser chicken salad</div>
+              <div class="dishPrice">&#8377; 220</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/ceaserChickenSalad.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Tuna salad</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/tunaSalad.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Bacon BLT Salad</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/baconBLTSalad.jpeg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Starters :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Cheese Balls</div>
+              <div class="dishPrice">&#8377; 266</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/cheeseBalls.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Pancer Skewer</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/pancerSkewer.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Garlic Buter Mushroom</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/garlicButerMushroom.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chilly Paneer</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/chillyPaneer.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Baby Corn Fitters</div>
+              <div class="dishPrice">&#8377; 240</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/babyCornFitters.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Cheese Nachos</div>
+              <div class="dishPrice">&#8377; 220</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/cheeseNachos.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">French Fries</div>
+              <div class="dishPrice">&#8377; 160</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/frenchFries.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Cheese Fries</div>
+              <div class="dishPrice">&#8377; 200</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/cheeseFries.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Pravon Garlic Buller</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/pravonGarlicBuller.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Crispy Calaman</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/crispyCalaman.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Fish Finger</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/fishFinger.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">BBQ Chicken Wings</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/fishFinger.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chicken 65</div>
+              <div class="dishPrice">&#8377; 300</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/chicken65.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Beef Chilly</div>
+              <div class="dishPrice">&#8377; 330</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/beefChilli.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Braffalore Wing Chicken</div>
+              <div class="dishPrice">&#8377; 330</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/braffaloreWingChicken.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">BBQ Pork Ribs</div>
+              <div class="dishPrice">&#8377; 368</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/PorkBBQRibs.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Galazy Indian Menu :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Gobi 65</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/Gobi65.jpeg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Paneer 65</div>
+              <div class="dishPrice">&#8377; 260</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/paneer65.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chilly Mushroom</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/chillyMushroom.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Onion Pakoda</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/onionPakoda.jpeg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Masala Papped</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/masalaPapped.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Ompodi Masala</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/ompodiMasala.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chicken 65</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/chicken65.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chicken Paper Fry</div>
+              <div class="dishPrice">&#8377; 265</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/chickenPaperFry.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Mutton</div>
+              <div class="dishPrice">&#8377; 450</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/mutton.jpeg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Mutton Papper</div>
+              <div class="dishPrice">&#8377; 410</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/muttonPepperFry.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Prawn Masala</div>
+              <div class="dishPrice">&#8377; 310</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/prawnMasala.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Checken Masala</div>
+              <div class="dishPrice">&#8377; 310</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/checkenMasala.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Kanava Masala</div>
+              <div class="dishPrice">&#8377; 330</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/kanavaMasala.JPG"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chilly Fish</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/chillyFish.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Beef Chilly Kerala</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/beefChillyKerala.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chicken Tikka</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/chickentikka.jpeg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Beef Tikka</div>
+              <div class="dishPrice">&#8377; 390</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/beefTikka.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Curry :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Yellow Dal</div>
+              <div class="dishPrice">&#8377; 220</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/yellowDal.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Panner Butter Masala</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/pannerButterMasala.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Kadai Vegetable</div>
+              <div class="dishPrice">&#8377; 240</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/kadaiVegetable.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Spanish Dal</div>
+              <div class="dishPrice">&#8377; 240</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/spanishDal.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Chicken Chettinadu</div>
+              <div class="dishPrice">&#8377; 320</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/chickenChettinadu.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Kerala Fish Curry</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/keralaFishCurry.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Mutton Chettinadu</div>
+              <div class="dishPrice">&#8377; 410</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/muttonChettinad.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Prawn Curry</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/prawnCurry.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Dosa :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Kari Dosa</div>
+              <div class="dishPrice">&#8377; 160</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/kariDosa.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Beef Kari Dosa</div>
+              <div class="dishPrice">&#8377; 190</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/beefKariDosa.JPG"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Prawn Kari Dosa</div>
+              <div class="dishPrice">&#8377; 190</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/prawnKariDosa.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Egg Dosa</div>
+              <div class="dishPrice">&#8377; 90</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/eggDosa.avif" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Fry & Tandoori :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Vanjarm Fish Fry</div>
+              <div class="dishPrice">&#8377; 680</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/vanjarmFishFry.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Tiger Prawn Fry</div>
+              <div class="dishPrice">&#8377; 300</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/tigerPrawnFry.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Vavva Full Fish</div>
+              <div class="dishPrice">&#8377; 950</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/vavvaFullFish.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Tandoor Chicken</div>
+              <div class="dishPrice">&#8377; 460</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/tandoorChicken.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Main Course Veg :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Ratatouille</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/Ratatouille.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Cottage Cheese Steak</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/cottageCheeseSteak.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Veg Augratin</div>
+              <div class="dishPrice">&#8377; 300</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/vegAugratin.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Main Course Non-Veg :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Beef Steak</div>
+              <div class="dishPrice">&#8377; 480</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/beefSteak.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">BBQ Roested Chicken</div>
+              <div class="dishPrice">&#8377; 480</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img
+                  src="./asset/Image/RoestedBBQChicken.jpg"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Grilled Fish</div>
+              <div class="dishPrice">&#8377; 480</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/grilledFish.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Grilled Prawn</div>
+              <div class="dishPrice">&#8377; 480</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/prawn.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="dishTitle dishTitleName m-0">Burger :-</h5>
+      <div class="row">
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Burger-Veg</div>
+              <div class="dishPrice">&#8377; 340</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/burger.jpeg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Burger-Chicken</div>
+              <div class="dishPrice">&#8377; 360</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/burgerVeg.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-3 pt-4">
+          <div class="menuList">
+            <div class="col-6 dishNamePrice ps-0">
+              <div class="dishName">Burger-Beef</div>
+              <div class="dishPrice">&#8377; 380</div>
+              <div class="mt-3">
+                <button class="filterBtn">
+                  More Details &nbsp; <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-6 p-0 position-relative">
+              <div class="dishImage">
+                <img src="./asset/Image/beefBurger.jpg" alt="" class="w-100" />
+              </div>
+              <button class="addBtn">Add</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -283,8 +1710,6 @@
       </div>
     </section> -->
 
-    <section class="container"></section>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <!-- Bootstrap JS -->
@@ -294,5 +1719,6 @@
       src="https://kit.fontawesome.com/58f651b852.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./asset/JS/script.js"></script>
   </body>
 </html>
