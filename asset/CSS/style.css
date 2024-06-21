@@ -87,8 +87,11 @@ button:focus {
 }
 .dishName {
   font-size: 16px;
+  font-weight: 600;
   color: #343745;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 .dishType {
   font-size: 14px;
@@ -166,7 +169,7 @@ button:focus {
 }
 
 .menuList {
-  height: 170px;
+  height: 180px;
   padding: 20px 15px;
   width: 100%;
   border-radius: 20px;
@@ -181,10 +184,7 @@ button:focus {
   padding: 0 15px 0 0;
   flex-direction: column;
 }
-.dishName {
-  font-size: 18px;
-  font-weight: 600;
-}
+
 .dishTitleName {
   padding: 20px 0 0;
 }
@@ -220,4 +220,9 @@ button:focus {
   top: 65px;
   z-index: 50;
   background-color: white;
+}
+
+.Vegicon {
+  width: 15px;
+  display: inline-flex;
 }
