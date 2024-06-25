@@ -226,7 +226,8 @@ button:focus {
   background-color: white;
 }
 
-.Vegicon {
+.Vegicon,
+.nonVegicon {
   width: 15px;
   display: inline-flex;
 }
@@ -235,4 +236,20 @@ button:focus {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.cuisinesName {
+  font-size: 12px;
+}
+
+.btnActive {
+  background-color: #ff9d00;
+  color: white;
+  border-color: #ff9d00;
+}
+
+.titleActive {
+  border-bottom: 1px solid;
+  border-radius: 2px;
+  font-weight: 600;
 }

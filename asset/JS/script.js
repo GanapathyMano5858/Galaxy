@@ -1,40 +1,80 @@
 $(document).ready(function () {
+  let currentFilter = 'all';
+
+  // Click event for items
+  $(".items").on("click", function () {
+    // Remove titleActive class from all items
+    $(".items .cuisinesName").removeClass("titleActive");
+    // Add titleActive class to the clicked item
+    $(this).find(".cuisinesName").addClass("titleActive");
+    
+    let cuisine = $(this).find(".cuisinesName").text().trim();
+    $("#searchInput").val(cuisine);
+    $("#searchInput").keyup();
+  });
+
+  // Keyup event for the search input
   $("#searchInput").on("keyup", function () {
-    let filter = $(this).val().toLowerCase();
+    filterDishes();
+  });
+
+  function filterDishes() {
+    let filter = $("#searchInput").val().toLowerCase();
     let dishes = $(".menuList");
-    let anyDishVisible = false;
 
     dishes.each(function () {
       let dishName = $(this).find(".dishName").text().toLowerCase();
-      if (dishName.includes(filter)) {
-        $(this).parent().show();
-        anyDishVisible = true;
+      let isVeg = $(this).find('img[alt="veg"]').length > 0;
+      let isNonVeg = $(this).find('img[alt="nonVeg"]').length > 0;
+      let matchesSearch = dishName.includes(filter);
+      let matchesFilter = (currentFilter === 'all') ||
+                          (currentFilter === 'veg' && isVeg) ||
+                          (currentFilter === 'nonVeg' && isNonVeg);
+
+      if (matchesSearch && matchesFilter) {
+        $(this).closest('.col-12').show();
       } else {
-        $(this).parent().hide();
+        $(this).closest('.col-12').hide();
       }
     });
 
-    if (filter) {
-      $("#popularCuisines").hide();
-      $(".dishTitle").hide();
-    } else {
-      $("#popularCuisines").show();
-      $(".dishTitle").show();
-    }
+    toggleDishTitle();
+  }
+
+  function setActiveButton(btnId) {
+    $(".filterBtn").removeClass("btnActive");
+    $(btnId).addClass("btnActive");
+  }
+
+  function toggleDishTitle() {
+    $(".dishTitle").each(function () {
+      let section = $(this).next(".row");
+      if (section.find(".col-12:visible").length === 0) {
+        $(this).hide();
+      } else {
+        $(this).show();
+      }
+    });
+  }
+
+  $("#vegBtn").on("click", function () {
+    setActiveButton("#vegBtn");
+    currentFilter = 'veg';
+    filterDishes();
   });
-});
 
-$(document).ready(function () {
-  $("#searchInput").on("input", function () {
-    let inputVal = $(this).val().trim();
-
-    if (inputVal) {
-      $("#popularCuisines").hide();
-      $(".dishTitle").hide();
-    } else {
-      $("#popularCuisines").show();
-      $(".dishTitle").show();
-    }
+  $("#nonVegBtn").on("click", function () {
+    setActiveButton("#nonVegBtn");
+    currentFilter = 'nonVeg';
+    filterDishes();
   });
-});
 
+  $("#allBtn").on("click", function () {
+    setActiveButton("#allBtn");
+    currentFilter = 'all';
+    filterDishes();
+  });
+
+  // Initial call to set the correct state on page load
+  toggleDishTitle();
+});
